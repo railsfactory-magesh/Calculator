@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" android:animationCache="false">
+    <EditText android:text="" android:layout_height="100dp" android:id="@+id/tf" android:layout_width="match_parent" />
+    <LinearLayout
+      android:orientation="horizontal"
+      android:layout_marginTop="25dp"
+      android:layout_width="fill_parent"
+      android:layout_height="60dp" android:gravity="center_horizontal|top">
+    <Button android:text="1"
+     android:id="@+id/button1"
+     android:gravity="center_horizontal"
+     android:layout_width="80dip"
+     android:layout_height="60dip"></Button>
+     <Button android:text="2"
+     android:id="@+id/button2"
+     android:gravity="center_horizontal"
+     android:layout_width="80dip"
+     android:layout_height="60dip"></Button>
+     <Button android:text="3"
+     android:id="@+id/button3"
+     android:gravity="center_horizontal"
+     android:layout_width="80dip"
+     android:layout_height="60dip"></Button>
+     <Button android:text="4"
+     android:id="@+id/button4"
+     android:gravity="center_horizontal"
+     android:layout_width="80dip"
+     android:layout_height="60dip"></Button>
+	</LinearLayout>
+	 <LinearLayout
+      android:orientation="horizontal"
+      android:layout_width="fill_parent"
+      android:layout_height="60dp" android:gravity="center_horizontal|top">
+      <Button android:text="5"
+     android:id="@+id/button5"
+     android:gravity="center_horizontal"
+     android:layout_width="80dip"
+     android:layout_height="60dip"></Button>
+     <Button android:text="6"
+     android:id="@+id/button6"
+     android:gravity="center_horizontal"
+     android:layout_width="80dip"
+     android:layout_height="60dip"></Button>
+     <Button android:text="7"
+     android:id="@+id/button7"
+     android:gravity="center_horizontal"
+     android:layout_width="80dip"
+     android:layout_height="60dip"></Button>
+     <Button android:text="8"
+     android:id="@+id/button8"
+     android:gravity="center_horizontal"
+     android:layout_width="80dip"
+     android:layout_height="60dip"></Button>
+      </LinearLayout>
+      <LinearLayout
+      android:orientation="horizontal"
+      android:layout_width="fill_parent"
+      android:layout_height="60dp" android:gravity="center_horizontal|top">
+      <Button android:text="9"
+     android:id="@+id/button9"
+     android:gravity="center_horizontal"
+     android:layout_width="80dip"
+     android:layout_height="60dip"></Button>
+     <Button android:text="0"
+     android:id="@+id/button0"
+     android:gravity="center_horizontal"
+     android:layout_width="80dip"
+     android:layout_height="60dip"></Button>
+     <Button android:text="+"
+     android:id="@+id/plus"
+     android:gravity="center_horizontal"
+     android:layout_width="80dip"
+     android:layout_height="60dip"></Button>
+     <Button android:text="-"
+     android:id="@+id/minus"
+     android:gravity="center_horizontal"
+     android:layout_width="80dip"
+     android:layout_height="60dip"></Button>
+      </LinearLayout>
+      <LinearLayout
+      android:orientation="horizontal"
+      android:layout_width="fill_parent"
+      android:layout_height="60dp" android:gravity="center_horizontal|top">
+      <Button android:text="*"
+     android:id="@+id/mul"
+     android:gravity="center_horizontal"
+     android:layout_width="80dip"
+     android:layout_height="60dip"></Button>
+     <Button android:text="/"
+     android:id="@+id/div"
+     android:gravity="center_horizontal"
+     android:layout_width="80dip"
+     android:layout_height="60dip"></Button>
+     <Button android:text="="
+     android:id="@+id/equal"
+     android:gravity="center_horizontal"
+     android:layout_width="80dip"
+     android:layout_height="60dip"></Button>
+     <Button android:text="CE"
+     android:id="@+id/buttonc"
+     android:gravity="center_horizontal"
+     android:layout_width="80dip"
+     android:layout_height="60dip"></Button>
+      </LinearLayout>
+      
+</LinearLayout>
