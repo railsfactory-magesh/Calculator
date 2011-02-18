@@ -10,19 +10,23 @@ import android.widget.EditText;
 
 public class CalculatorActivity extends Activity {
     /** Called when the activity is first created. */
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
+
+
+
+	@Override
+    
+        public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
         
-        final double num = 0;
-        final double memNum = 0;
-        final int operator = 1;
-        final boolean readyToClear = false;
-        final boolean hasChanged = false;
+        // final double num = 0;
+        // final double memNum = 0;
+        // final int operator = 1;
+        // final boolean readyToClear = false;
+        // final boolean hasChanged = false;
 
         
-        final EditText tf = (EditText) findViewById(R.id.tf);
+    	final EditText tf = (EditText) findViewById(R.id.tf);        
         final Button btn1 = (Button) findViewById(R.id.button1);
         final Button btn2 = (Button) findViewById(R.id.button2);
         final Button btn3 = (Button) findViewById(R.id.button3);
@@ -39,7 +43,97 @@ public class CalculatorActivity extends Activity {
         final Button div = (Button) findViewById(R.id.div);
         final Button equals = (Button) findViewById(R.id.equal);
         
+		
         
+        equals.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+       
+            }
+        });
+        
+        btn1.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+           
+            }
+        });
+        
+        btn2.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+               
+            }
+        });
+        
+        btn3.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                
+            }
+        });
+        
+        btn4.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                
+            }
+        });
+        
+        btn5.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                
+            }
+        });
+        
+        btn6.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                
+            }
+        });
+        
+        btn7.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                
+            }
+        });
+        
+        btn8.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                
+            }
+        });
+        
+        btn9.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                
+            }
+        });
+        
+        btn0.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                
+            }
+        });
+        
+        plus.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                
+            }
+        });
+        
+        minus.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                
+            }
+        });
+        
+        mul.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                
+            }
+        });
+        
+        div.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                
+            }
+        });
         
         
         
@@ -104,9 +198,6 @@ public class CalculatorActivity extends Activity {
                       handleEquals(2);
                       break;
 
-                     case KeyEvent.KEYCODE_PERIOD:
-                      handleDecimal();
-                      break;
 
                      case KeyEvent.KEYCODE_C:
                       reset();
@@ -123,7 +214,29 @@ public class CalculatorActivity extends Activity {
                 }
                 return false;
             }
+
+        
+                        
+			private void reset() {
+				// TODO Auto-generated method stub
+				
+			}
+
+			private void handleEquals(int i) {
+				// TODO Auto-generated method stub
+				
+			}
+
+			public void handleNumber(int i) {
+				
+				//Toast.makeText(CalculatorActivity.this, i, Toast.LENGTH_SHORT).show();
+				String num = new Integer(i).toString();
+				tf.append(num);
+			}
         });
         
+        
     }
+ 
+        
 }
