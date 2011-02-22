@@ -3,7 +3,7 @@
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent" android:animationCache="false">
-    <EditText android:text="" android:layout_height="100dp" android:id="@+id/tf" android:layout_width="match_parent" android:inputType="number" />
+    <EditText android:text="" android:layout_height="100dp" android:id="@+id/tf" android:layout_width="match_parent" android:inputType="" />
     <LinearLayout
       android:orientation="horizontal"
       android:layout_marginTop="25dp"

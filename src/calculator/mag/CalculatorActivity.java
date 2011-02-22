@@ -7,11 +7,16 @@ import android.view.View;
 import android.view.View.OnKeyListener;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
+
 
 public class CalculatorActivity extends Activity {
     /** Called when the activity is first created. */
-
-
+	
+	 int temp = 0;
+     int temp1 = 0;
+     int result = 0;
+     int operator = 0;
 
 	@Override
     
@@ -19,14 +24,12 @@ public class CalculatorActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
         
-        // final double num = 0;
+         //final String exp = "";
         // final double memNum = 0;
-        // final int operator = 1;
+         
         // final boolean readyToClear = false;
         // final boolean hasChanged = false;
-
-        
-    	final EditText tf = (EditText) findViewById(R.id.tf);        
+        final EditText tf = (EditText) findViewById(R.id.tf);        
         final Button btn1 = (Button) findViewById(R.id.button1);
         final Button btn2 = (Button) findViewById(R.id.button2);
         final Button btn3 = (Button) findViewById(R.id.button3);
@@ -42,98 +45,148 @@ public class CalculatorActivity extends Activity {
         final Button mul = (Button) findViewById(R.id.mul);
         final Button div = (Button) findViewById(R.id.div);
         final Button equals = (Button) findViewById(R.id.equal);
-        
-		
+        final Button cl = (Button) findViewById(R.id.buttonc);
+       
         
         equals.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-       
+            	
             }
         });
         
         btn1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-           
+            	tf.append("1");
             }
         });
         
         btn2.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-               
+            	tf.append("2");  
             }
         });
         
         btn3.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                
+            	tf.append("3");   
             }
         });
         
         btn4.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                
+            	tf.append("4");   
             }
         });
         
         btn5.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                
+            	tf.append("5");     
             }
         });
         
         btn6.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                
+            	tf.append("6");     
             }
         });
         
         btn7.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                
+            	tf.append("7");   
             }
         });
         
         btn8.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                
+            	tf.append("8");
             }
         });
         
         btn9.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                
+            	tf.append("9");     
             }
         });
         
         btn0.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                
+            	tf.append("0");     
             }
         });
         
         plus.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                
+            	//tf.append("+");
+            	temp = Integer.parseInt(tf.getText().toString());
+           	 	operator = 1;
+           	 	tf.setText("");
             }
         });
         
         minus.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                
+            	temp = Integer.parseInt(tf.getText().toString());
+            	operator = 2;
+            	tf.setText("");
             }
         });
         
         mul.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                
+            	temp = Integer.parseInt(tf.getText().toString());
+            	operator = 3;
+            	tf.setText("");   
             }
         });
         
         div.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                
+            	temp = Integer.parseInt(tf.getText().toString());
+            	operator = 4;
+            	tf.setText("");
             }
         });
+        
+        cl.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+            	
+            	tf.setText("");
+            }
+        });
+        
+        equals.setOnClickListener(new View.OnClickListener() {
+			
+			public void onClick(View v) {
+				 
+              	 temp1 = Integer.parseInt(tf.getText().toString());
+              	 
+              	switch (operator) {
+              	
+              	case 1:
+              		result = temp + temp1;
+              		break;
+              		
+              	case 2:
+              		result = temp - temp1;
+              		break;
+              		
+              	case 3:
+              		result = temp * temp1;
+              		break;
+              		
+              	case 4:
+              		result = temp / temp1;
+              		break;
+              		
+              	
+              	}
+              	 //result = temp + temp1;
+              	 tf.setText(String.valueOf(result));
+              	//Toast.makeText(getApplicationContext(), temp1, Toast.LENGTH_SHORT).show();
+				
+			}
+		});
+        
         
         
         
@@ -145,7 +198,8 @@ public class CalculatorActivity extends Activity {
                 	 keyCode = e.getKeyCode();
                 	 //tf.append("["+Integer.toString(keyCode)+"]");
                 	 
-                	 switch (keyCode) {
+                	 Object temp1;
+					switch (keyCode) {
                      case KeyEvent.KEYCODE_0:
                       handleNumber(0);
                       break;
@@ -187,26 +241,34 @@ public class CalculatorActivity extends Activity {
                       break;
 
                      case 43:
-                      handleEquals(1);
-                      break;
-
-                     case KeyEvent.KEYCODE_EQUALS:
-                      handleEquals(0);
+                      
                       break;
 
                      case KeyEvent.KEYCODE_MINUS:
-                      handleEquals(2);
+                      tf.append("-");
                       break;
-
-
+                      
+                     case KeyEvent.KEYCODE_PLUS:
+                    	 temp = Integer.parseInt(tf.getText().toString());
+                    	 int operator = 1;
+                    	 tf.setText("0");
+                    	 break;
+                    	 
                      case KeyEvent.KEYCODE_C:
-                      reset();
+                      tf.setText(0);
                       break;
 
                      case KeyEvent.KEYCODE_SLASH:
-                      handleEquals(4);
+                      tf.append("/");
                       break;
-
+                      
+                     case KeyEvent.KEYCODE_EQUALS:
+                         //tf.setText(2+7);
+                       	 temp1 = Integer.parseInt("5");
+                       	 //int result = temp+temp1;
+                       	 //tf.setText(result);
+                         break;
+                         
                      case KeyEvent.KEYCODE_DPAD_DOWN:
                 	 }
                                           
@@ -215,17 +277,7 @@ public class CalculatorActivity extends Activity {
                 return false;
             }
 
-        
-                        
-			private void reset() {
-				// TODO Auto-generated method stub
-				
-			}
 
-			private void handleEquals(int i) {
-				// TODO Auto-generated method stub
-				
-			}
 
 			public void handleNumber(int i) {
 				
@@ -237,6 +289,10 @@ public class CalculatorActivity extends Activity {
         
         
     }
+
+	
+
+	
  
         
 }
