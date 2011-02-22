@@ -24,8 +24,8 @@
      android:gravity="center_horizontal"
      android:layout_width="80dip"
      android:layout_height="60dip"></Button>
-     <Button android:text="4"
-     android:id="@+id/button4"
+     <Button android:text="CE"
+     android:id="@+id/buttonc"
      android:gravity="center_horizontal"
      android:layout_width="80dip"
      android:layout_height="60dip"></Button>
@@ -34,7 +34,12 @@
       android:orientation="horizontal"
       android:layout_width="fill_parent"
       android:layout_height="60dp" android:gravity="center_horizontal|top">
-      <Button android:text="5"
+      <Button android:text="4"
+     android:id="@+id/button4"
+     android:gravity="center_horizontal"
+     android:layout_width="80dip"
+     android:layout_height="60dip"></Button>
+     <Button android:text="5"
      android:id="@+id/button5"
      android:gravity="center_horizontal"
      android:layout_width="80dip"
@@ -44,7 +49,17 @@
      android:gravity="center_horizontal"
      android:layout_width="80dip"
      android:layout_height="60dip"></Button>
-     <Button android:text="7"
+     <Button android:text="/"
+     android:id="@+id/div"
+     android:gravity="center_horizontal"
+     android:layout_width="80dip"
+     android:layout_height="60dip"></Button>
+      </LinearLayout>
+      <LinearLayout
+      android:orientation="horizontal"
+      android:layout_width="fill_parent"
+      android:layout_height="60dp" android:gravity="center_horizontal|top">
+      <Button android:text="7"
      android:id="@+id/button7"
      android:gravity="center_horizontal"
      android:layout_width="80dip"
@@ -54,23 +69,8 @@
      android:gravity="center_horizontal"
      android:layout_width="80dip"
      android:layout_height="60dip"></Button>
-      </LinearLayout>
-      <LinearLayout
-      android:orientation="horizontal"
-      android:layout_width="fill_parent"
-      android:layout_height="60dp" android:gravity="center_horizontal|top">
-      <Button android:text="9"
+     <Button android:text="9"
      android:id="@+id/button9"
-     android:gravity="center_horizontal"
-     android:layout_width="80dip"
-     android:layout_height="60dip"></Button>
-     <Button android:text="0"
-     android:id="@+id/button0"
-     android:gravity="center_horizontal"
-     android:layout_width="80dip"
-     android:layout_height="60dip"></Button>
-     <Button android:text="+"
-     android:id="@+id/plus"
      android:gravity="center_horizontal"
      android:layout_width="80dip"
      android:layout_height="60dip"></Button>
@@ -84,13 +84,13 @@
       android:orientation="horizontal"
       android:layout_width="fill_parent"
       android:layout_height="60dp" android:gravity="center_horizontal|top">
-      <Button android:text="*"
-     android:id="@+id/mul"
+      <Button android:text="0"
+     android:id="@+id/button0"
      android:gravity="center_horizontal"
      android:layout_width="80dip"
      android:layout_height="60dip"></Button>
-     <Button android:text="/"
-     android:id="@+id/div"
+     <Button android:text="*"
+     android:id="@+id/mul"
      android:gravity="center_horizontal"
      android:layout_width="80dip"
      android:layout_height="60dip"></Button>
@@ -99,8 +99,8 @@
      android:gravity="center_horizontal"
      android:layout_width="80dip"
      android:layout_height="60dip"></Button>
-     <Button android:text="CE"
-     android:id="@+id/buttonc"
+     <Button android:text="+"
+     android:id="@+id/plus"
      android:gravity="center_horizontal"
      android:layout_width="80dip"
      android:layout_height="60dip"></Button>
