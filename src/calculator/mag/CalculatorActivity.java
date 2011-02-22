@@ -7,7 +7,6 @@ import android.view.View;
 import android.view.View.OnKeyListener;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
 
 
 public class CalculatorActivity extends Activity {
@@ -198,7 +197,7 @@ public class CalculatorActivity extends Activity {
                 	 keyCode = e.getKeyCode();
                 	 //tf.append("["+Integer.toString(keyCode)+"]");
                 	 
-                	 Object temp1;
+                	 //Object temp1;
 					switch (keyCode) {
                      case KeyEvent.KEYCODE_0:
                       handleNumber(0);
@@ -251,22 +250,24 @@ public class CalculatorActivity extends Activity {
                      case KeyEvent.KEYCODE_PLUS:
                     	 temp = Integer.parseInt(tf.getText().toString());
                     	 int operator = 1;
-                    	 tf.setText("0");
+                    	 tf.setText("");
                     	 break;
                     	 
-                     case KeyEvent.KEYCODE_C:
-                      tf.setText(0);
+                     case KeyEvent.KEYCODE_DEL:
+                      tf.setText("");
                       break;
 
                      case KeyEvent.KEYCODE_SLASH:
                       tf.append("/");
                       break;
                       
+                     case KeyEvent.KEYCODE_BACK:
+                    	 finish();
+                    	 break;
+                    	 
+                      
                      case KeyEvent.KEYCODE_EQUALS:
-                         //tf.setText(2+7);
-                       	 temp1 = Integer.parseInt("5");
-                       	 //int result = temp+temp1;
-                       	 //tf.setText(result);
+                        
                          break;
                          
                      case KeyEvent.KEYCODE_DPAD_DOWN:
